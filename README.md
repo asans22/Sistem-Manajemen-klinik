@@ -1,1 +1,1 @@
-# Sistem-Manajemen-klinik
+# Sistem-Manajemen-Klinik
