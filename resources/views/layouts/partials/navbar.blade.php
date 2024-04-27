@@ -1,6 +1,6 @@
 <nav class="p-6 flex bg-linen justify-between font-poppins">
-    <div class="text-2xl flex items-center">
-        <img class=w-16 src="Hospital.png" alt="Logo">
+    <div class="text-2xl flex flex-row gap-2 items-center">
+        <img class=w-16 src="{{ url('assets/img/logo.png') }}" alt="Logo">
         SIMAK
     </div>
 
