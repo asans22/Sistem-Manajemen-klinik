@@ -1,6 +1,8 @@
 @extends ('layouts.layout')
 @section ('content')
 
+@include ('layouts.component.header', ['pageTitle' => 'Daftar Dokter'], ['description' => 'Informasi daftar dokter'])
+
 <ul class="flex flex-col gap-7 my-16 mx-48">
     <li class="flex justify-between items-center py-5 font-poppins">
         <div class="flex items-center gap-5">
