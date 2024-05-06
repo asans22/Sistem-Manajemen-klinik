@@ -18,6 +18,8 @@ export default {
         "blue": "#D1E9FF",
         "black": "#161C2D",
         "blue-sky": "#73C7E3",
+          "neon":"#23B0BA",
+        "button":"#60a6bd",
       }
     },
   },
@@ -25,4 +27,3 @@ export default {
     require('@tailwindcss/forms'),
   ],
 }
-
