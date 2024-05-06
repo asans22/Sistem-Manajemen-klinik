@@ -2,8 +2,24 @@
 
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
-    return view('welcome');
+Route::get('/', function (){
+    return view('Landing');
+});
+ dokter-page
+Route::get('/login', function (){
+    return view('Login');
+});
+
+Route::get('/register', function (){
+    return view('Register');
+});
+
+Route::get('/home', function (){
+    return view('Home');
+});
+
+Route::get('/daftarDokter', function (){
+    return view('Dokter');
 });
 
 Route::get('/admin',function() {
@@ -22,3 +38,4 @@ Route::get('/obat',function() {
 Route::get('/dokter',function() {
     return view('/dokter/pasien');
 });
+
