@@ -21,3 +21,7 @@ Route::get('/home', function (){
 Route::get('/dokter', function (){
     return view('Dokter');
 });
+
+Route::get('/akun', function (){
+    return view('Account');
+});
