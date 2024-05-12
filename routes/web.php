@@ -7,8 +7,6 @@ use App\Http\Middleware\isLogin;
 use App\Http\Middleware\UserAkses;
 use Illuminate\Support\Facades\Route;
 
-// Define routes...
-
 Route::get('/', [UserSessionControl::class, 'landing'])->middleware(isGuest::class);
 Route::get('/login', [UserSessionControl::class, 'index'])->middleware(isGuest::class);
 Route::post('/loginUser', [UserSessionControl::class, 'login'])->middleware(isGuest::class);
