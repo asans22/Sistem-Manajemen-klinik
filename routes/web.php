@@ -22,6 +22,10 @@ Route::get('/daftarDokter', function (){
     return view('Dokter');
 });
 
+Route::get('/akun', function (){
+    return view('Account');
+});
+
 Route::get('/admin',function() {
     return view('/admin/akun');
 });

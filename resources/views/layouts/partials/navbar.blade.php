@@ -8,16 +8,16 @@
         <div class="nav-links duration-500 md:static absolute bg-linen md:min-h-fit min-h-[50vh] left-0 top-[-100%] md:w-auto w-full flex items-center px-5 ">
             <ul class="flex md:flex-row flex-col md:items-center md:gap-6 gap-8 pr-11 font-light">
                 <li>
-                    <a class="hover:text-navy hover:font-medium cursor-pointer " href="#">Beranda</a>
+                    <a class="hover:text-navy hover:font-medium cursor-pointer " href="/home">Beranda</a>
                 </li>
                 <li>
-                    <a class="hover:text-navy hover:font-medium cursor-pointer" href="#">Dokter</a>
+                    <a class="hover:text-navy hover:font-medium cursor-pointer" href="/dokter">Dokter</a>
                 </li>
                 <li>
-                    <a class="hover:text-navy hover:font-medium cursor-pointer" href="#">Reservasi</a>
+                    <a class="hover:text-navy hover:font-medium cursor-pointer" href="/reservasi">Reservasi</a>
                 </li>
                 <li>
-                    <a class="hover:text-navy hover:font-medium cursor-pointer" href="#">Obat</a>
+                    <a class="hover:text-navy hover:font-medium cursor-pointer" href="/obat">Obat</a>
                 </li>
             </ul>
         </div>
