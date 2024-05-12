@@ -22,21 +22,21 @@
 
                         </li>
                         <li>
-                            <a href="./pasien"
+                            <a href="./adminPasien"
                             class="flex items-center  p-2 text-gray-900 rounded-lg hover:text-white bg-slate-100 dark:text-white hover:bg-neon dark:hover:bg-gray-700 group hover:scale-105 active:scale-100 hover:duration-75">
 
                             <span class="mx-auto">Data Pasien</span>
                         </a>
                         </li>
                         <li>
-                            <a href="./obat"
+                            <a href="./adminObat"
                             class="flex items-center  p-2 text-gray-900 rounded-lg hover:text-white bg-slate-100 dark:text-white hover:bg-neon dark:hover:bg-gray-700 group hover:scale-105 active:scale-100 hover:duration-75">
 
                             <span class="mx-auto">Data Obat</span>
                         </a>
                         </li>
                         <li>
-                            <a href="./"
+                            <a href="userLogout"
                                 class="flex items-center  p-2 text-gray-900 rounded-lg hover:text-white bg-slate-100 dark:text-white hover:bg-neon dark:hover:bg-gray-700 group hover:scale-105 active:scale-100 hover:duration-75">
 
                                 <span class="mx-auto">Keluar</span>

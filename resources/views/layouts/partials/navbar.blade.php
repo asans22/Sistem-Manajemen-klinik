@@ -19,6 +19,9 @@
                 <li>
                     <a class="hover:text-navy hover:font-medium cursor-pointer" href="/obat">Obat</a>
                 </li>
+                 <li>
+                    <a class="hover:text-navy hover:font-medium cursor-pointer" href="userLogout">Keluar</a>
+                </li>
             </ul>
         </div>
         <div class="flex items-center gap-5">
