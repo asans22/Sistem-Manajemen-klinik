@@ -29,3 +29,12 @@ Route::get('/reservasi',function() {
 Route::get('/obat',function() {
     return view('/user/obat');
 });
+
+Route::get('/daftarDokter', function (){
+    return view('Dokter');
+});
+
+Route::get('/akun', function (){
+    return view('Account');
+});
+
