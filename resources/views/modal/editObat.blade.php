@@ -1,4 +1,4 @@
-<!-- resources/views/modal/createObat.blade.php -->
+<!-- resources/views/modal/editObat.blade.php -->
 <div id="modalEditObat" class="fixed z-10 inset-0 overflow-y-auto hidden">
     <div class="flex items-center justify-center min-h-screen pt-4 px-4 pb-20 text-center sm:block sm:p-0">
         <div class="fixed inset-0 transition-opacity" aria-hidden="true">
@@ -10,29 +10,30 @@
                 <div class="sm:flex sm:items-start">
                     <div class="mt-3 text-center sm:mt-0 sm:ml-4 sm:text-left">
                         <h3 class="text-lg leading-6 font-medium text-gray-900" id="modal-title">
-                            Tambah Data Obat
+                            Edit Data Obat
                         </h3>
                         <div class="mt-2">
                             <form method="POST" action="{{ route('obat.update') }}">
                                 @csrf
+                                @method('PUT')
+                                <input type="hidden" name="id" id="editId">
                                 <div class="mb-4">
-                                    <label for="name" class="block text-gray-700 text-sm font-bold mb-2">Nama:</label>
-                                    <input type="text" name="name" id="name" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" required>
+                                    <label for="editName" class="block text-gray-700 text-sm font-bold mb-2">Nama:</label>
+                                    <input type="text" name="name" id="editName" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" required>
                                 </div>
                                 <div class="mb-4">
-                                    <label for="jenis" class="block text-gray-700 text-sm font-bold mb-2">Jenis:</label>
-                                    <input type="text" name="jenis" id="jenis" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" required>
+                                    <label for="editJenis" class="block text-gray-700 text-sm font-bold mb-2">Jenis:</label>
+                                    <input type="text" name="jenis" id="editJenis" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" required>
                                 </div>
                                 <div class="mb-4">
-                                    <label for="stok" class="block text-gray-700 text-sm font-bold mb-2">Stok:</label>
-                                    <input type="number" name="stok" id="stok" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" required>
+                                    <label for="editStok" class="block text-gray-700 text-sm font-bold mb-2">Stok:</label>
+                                    <input type="number" name="stok" id="editStok" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" required>
                                 </div>
                                 <div class="flex items-center justify-between">
-                                   
-                                    <button type="submit"  class="bg-neon hover:bg-[#1e939b] text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">
+                                    <button type="submit" class="bg-neon hover:bg-[#1e939b] text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">
                                         Simpan
                                     </button>
-                                    <button type="button" id="closeModal" class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">
+                                    <button type="button" id="closeEditModal" class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">
                                         Batal
                                     </button>
                                 </div>

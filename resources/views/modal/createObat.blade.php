@@ -1,5 +1,5 @@
 <!-- resources/views/modal/createObat.blade.php -->
-<div id="modal" class="fixed z-10 inset-0 overflow-y-auto hidden">
+<div id="modalCreateObat" class="fixed z-10 inset-0 overflow-y-auto hidden">
     <div class="flex items-center justify-center min-h-screen pt-4 px-4 pb-20 text-center sm:block sm:p-0">
         <div class="fixed inset-0 transition-opacity" aria-hidden="true">
             <div class="absolute inset-0 bg-gray-500 opacity-75"></div>
@@ -32,7 +32,7 @@
                                     <button type="submit"  class="bg-neon hover:bg-[#1e939b] text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">
                                         Simpan
                                     </button>
-                                    <button type="button" id="closeModal" class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">
+                                    <button type="button" id="closeCreateModal" class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">
                                         Batal
                                     </button>
                                 </div>
