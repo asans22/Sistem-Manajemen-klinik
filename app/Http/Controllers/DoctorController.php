@@ -29,6 +29,7 @@ class DoctorController extends Controller
             'no_hp' => 'required',
             'alamat' => 'required',
             'spesialisasi' => 'required',
+            'deskripsi'=> 'required',
             'jadwal' => 'required',
         ]);
 
@@ -44,6 +45,7 @@ class DoctorController extends Controller
         Doctor::create([
             'user_id' => $user->id,
             'spesialisasi' => $request->spesialisasi,
+            'deskripsi'=> $request->deskripsi,
             'jadwal' => $request->jadwal,
         ]);
 
@@ -63,6 +65,7 @@ class DoctorController extends Controller
             'no_hp' => 'required',
             'alamat' => 'required',
             'spesialisasi' => 'required',
+            'deskripsi'=> 'required',
             'description' => 'required',
             'jadwal' => 'required',
         ]);
@@ -76,6 +79,7 @@ class DoctorController extends Controller
 
         $doctor->update([
             'spesialisasi' => $request->spesialisasi,
+            'deskripsi'=> $request->deskripsi,
             'jadwal' => $request->jadwal,
         ]);
 
