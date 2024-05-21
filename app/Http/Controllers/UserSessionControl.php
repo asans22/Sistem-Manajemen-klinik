@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\User;
+use App\Models\Obat;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
@@ -40,7 +41,8 @@ class UserSessionControl extends Controller
        return view("user/reservasi");
     }
     function obatUser(){
-       return view("user/obat");
+        $obats = Obat::all();
+       return view("user/obat",compact('obats'));
         
     }
 
