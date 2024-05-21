@@ -2,14 +2,18 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\akun;
+use App\Models\User;
+use App\Models\Doctor;
 use Illuminate\Http\Request;
 
 class halamanAdminController extends Controller
 {
-    function adminDokter(){
-        return view("admin.dokter");
+    function adminDokter()
+    {
+        $doctors = Doctor::with('user')->get();
+        return view("admin.dokter", compact('doctors'));
     }
+
     function adminObat(){
         return view("admin.obat");
     }
@@ -18,7 +22,7 @@ class halamanAdminController extends Controller
     }
 
     function index(){
-        $data = akun::all();
+        $data = User::all();
         return $data;
 
     }

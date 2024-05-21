@@ -13,9 +13,8 @@ use function PHPUnit\Framework\returnSelf;
 class UserSessionControl extends Controller
 {
     function landing(){
-        return view("user/welcome");
+        return view("user/Welcome");
     }
-
     
     function index(){
         return view("user/login");
@@ -28,6 +27,9 @@ class UserSessionControl extends Controller
         return view("user/home");
     }
     function dokter(){
+        return view("user/Dokter");
+    }
+    function pasien(){
         return view("dokter/pasien");
     }
 

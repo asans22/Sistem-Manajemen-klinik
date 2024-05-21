@@ -36,14 +36,17 @@ class UsersTableSeeders extends Seeder
             'name'=>'dimas',
             'email'=>'dimas@gmail.com',
             'role'=>'dokter',
-            'no_hp'=>'087801481313 ',
+            'no_hp'=>'087801481313',
             'alamat'=>'Blang Bintang',
             'password'=>bcrypt('123456')
         ]
         ];
 
-        foreach ($userData as $key => $value) {
-           User::create($value);
+        foreach ($userData as $user) {
+            User::firstOrCreate(
+                ['email' => $user['email']], // Attributes to search for
+                $user // Attributes to set if a new record is created
+            );
         }
     }
 }
