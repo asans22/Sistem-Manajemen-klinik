@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\User;
+use App\Models\Doctor;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
@@ -27,7 +28,8 @@ class UserSessionControl extends Controller
         return view("user/home");
     }
     function dokter(){
-        return view("user/Dokter");
+        $doctors = Doctor::with('user')->get();
+        return view("user.Dokter", compact('doctors'));
     }
     function pasien(){
         return view("dokter/pasien");
