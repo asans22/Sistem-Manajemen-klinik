@@ -30,6 +30,19 @@ class UserSessionControl extends Controller
     function dokter(){
         return view("dokter/pasien");
     }
+    function dokterUser(){
+        return view("user/Dokter");
+    }
+    function myAccount(){
+        return view("user/Account");
+    }
+    function reservasi(){
+       return view("user/reservasi");
+    }
+    function obatUser(){
+       return view("user/obat");
+        
+    }
 
 
     function login(Request $request){
