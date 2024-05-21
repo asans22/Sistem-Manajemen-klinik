@@ -17,6 +17,7 @@ class DoctorsTableSeeder extends Seeder
                 ['user_id' => $doctor->id], // Ensure uniqueness by user_id
                 [
                     'spesialisasi' => 'Cardiologist', // Default value
+                    'deskripsi' => 'Dokter cardiologist', // Default value
                     'jadwal' => 'Monday, 08:00 - 12:00 WIB' // Default value
                 ]
             );
