@@ -12,6 +12,7 @@ class Doctor extends Model
     protected $fillable = [
         'user_id',
         'spesialisasi',
+        'deskripsi',
         'jadwal',
     ];
 
