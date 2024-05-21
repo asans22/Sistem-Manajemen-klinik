@@ -11,8 +11,9 @@ class CreateDoctorsTable extends Migration
         Schema::create('doctors', function (Blueprint $table) {
             $table->id();
             $table->foreignId('user_id')->constrained()->onDelete('cascade');
-            $table->string('spesialisasi')->default('General Practitioner');
-            $table->string('jadwal')->default('Senin, 08.00 - 12.00 WIB');
+            $table->string('spesialisasi');//->default('General Practitioner');
+            $table->string('deskripsi');//->default('General Practitioner');
+            $table->string('jadwal');//->default('Senin, 08.00 - 12.00 WIB');
             $table->timestamps();
         });
     }
