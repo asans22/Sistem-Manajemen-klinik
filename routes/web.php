@@ -27,6 +27,7 @@ Route::get('/obatUser', [UserSessionControl::class, 'obatUser'])->middleware([is
 Route::get('/dokter', [UserSessionControl::class, 'dokter'])->middleware([isLogin::class, UserAkses::class.':dokter']);
 
 
+
 //admin
 Route::get('/admin', [UserSessionControl::class, 'admin'])->middleware([isLogin::class, UserAkses::class.':admin']);
 Route::get('/adminDokter', [halamanAdminController::class, 'adminDokter'])->middleware([isLogin::class, UserAkses::class.':admin']);
