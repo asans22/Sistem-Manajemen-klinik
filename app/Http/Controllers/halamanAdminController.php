@@ -4,11 +4,14 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Obat;
+use App\Models\Dokter;
+
 
 class halamanAdminController extends Controller
 {
     public function adminDokter(){
-        return view('admin.dokter');
+        $dokters = Dokter::all();
+        return view('admin.dokter', compact('dokters'));
     }
   
     public function adminPasien(){
@@ -67,5 +70,73 @@ class halamanAdminController extends Controller
 
     return redirect()->route('adminObat')->with('success', 'Data obat berhasil dihapus!');
 }
+
+public function storeDokter(Request $request){
+    $validated = $request->validate([
+        'email' => 'required|string|max:255|unique:dokters,email',
+        'id_dokter' => 'required|string|max:255',
+        'name' => 'required|string|max:255',
+        'alamat' => 'required|string|max:255',
+        'no_hp' => 'required|string|max:255',
+        'password' => 'required|string|max:255',
+        'spesialis' => 'required|string|max:255',
+        'jadwal' => 'required|string|max:255',
+        
+    ]);
+
+    $dokter = new Dokter();
+    $dokter->email = $validated['email'];
+    $dokter->id_dokter = $validated['id_dokter'];
+    $dokter->name = $validated['name'];
+    $dokter->alamat = $validated['alamat'];
+    $dokter->no_hp = $validated['no_hp'];
+    $dokter->password = $validated['password'];
+    $dokter->spesialis = $validated['spesialis'];
+    $dokter->jadwal = $validated['jadwal'];
+    $dokter->save();
+
+    return redirect()->route('adminDokter')->with('success', 'Data dokter  berhasil ditambahkan!');
+}
+
+public function updateDokter(Request $request)
+{
+    $validated = $request->validate([
+        'id' => 'required|integer|exists:dokters,id',
+        'email' => 'required|string|max:255|unique:dokters,email,' . $request->id,
+        'id_dokter' => 'required|string|max:255',
+        'name' => 'required|string|max:255',
+        'alamat' => 'required|string|max:255',
+        'no_hp' => 'required|string|max:255',
+        'password' => 'required|string|max:255',
+        'spesialis' => 'required|string|max:255',
+        'jadwal' => 'required|string|max:255',
+    ]);
+
+    $dokter = Dokter::findOrFail($validated['id']);
+    $dokter->email = $validated['email'];
+    $dokter->id_dokter = $validated['id_dokter'];
+    $dokter->name = $validated['name'];
+    $dokter->alamat = $validated['alamat'];
+    $dokter->no_hp = $validated['no_hp'];
+    $dokter->password = $validated['password'];
+    $dokter->spesialis = $validated['spesialis'];
+    $dokter->jadwal = $validated['jadwal'];
+    $dokter->save();
+
+    return redirect()->route('adminDokter')->with('success', 'Data dokter berhasil diupdate!');
+}
+
+
+public function getDokter($id)
+{
+    $dokter = Dokter::find($id);
+    if ($dokter) {
+        return response()->json($dokter);
+    } else {
+        return response()->json(['error' => 'Dokter tidak ditemukan'], 404);
+    }
+}
+
+
 
 }

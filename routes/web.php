@@ -29,10 +29,13 @@ Route::get('/dokter', [UserSessionControl::class, 'dokter'])->middleware([isLogi
 
 //admin
 Route::get('/admin', [UserSessionControl::class, 'admin'])->middleware([isLogin::class, UserAkses::class.':admin']);
-Route::get('/adminDokter', [halamanAdminController::class, 'adminDokter'])->middleware([isLogin::class, UserAkses::class.':admin']);
+Route::get('/adminDokter', [halamanAdminController::class, 'adminDokter'])->name('adminDokter')->middleware([isLogin::class, UserAkses::class.':admin']);
 Route::get('/adminPasien', [halamanAdminController::class, 'adminPasien'])->middleware([isLogin::class, UserAkses::class.':admin']);
 Route::get('/adminObat', [halamanAdminController::class, 'showObat'])->name('adminObat')->middleware([isLogin::class, UserAkses::class.':admin']);
 Route::post('/obat', [halamanAdminController::class, 'storeObat'])->name('obat.store')->middleware([isLogin::class, UserAkses::class.':admin']);
+Route::post('/createDokter', [halamanAdminController::class, 'storeDokter'])->name('dokter.store')->middleware([isLogin::class, UserAkses::class.':admin']);
+Route::get('/adminDokter/{id}', [halamanAdminController::class, 'getDokter'])->middleware([isLogin::class, UserAkses::class.':admin']);
+Route::put('/adminDokter/update', [halamanAdminController::class, 'updateDokter'])->name('dokter.update')->middleware([isLogin::class, UserAkses::class.':admin']);
 Route::put('/obat/update', [halamanAdminController::class, 'update'])->name('obat.update')->middleware([isLogin::class, UserAkses::class.':admin']);
 Route::get('/obat/{id}', [halamanAdminController::class, 'getObat'])->middleware([isLogin::class, UserAkses::class.':admin']);
 Route::delete('/obat/{id}', [halamanAdminController::class, 'destroy'])->name('obat.destroy')->middleware([isLogin::class, UserAkses::class.':admin']);
