@@ -11,13 +11,13 @@
                     <a class="hover:text-navy hover:font-medium cursor-pointer " href="/home">Beranda</a>
                 </li>
                 <li>
-                    <a class="hover:text-navy hover:font-medium cursor-pointer" href="/dokter">Dokter</a>
+                    <a class="hover:text-navy hover:font-medium cursor-pointer" href="/dokterUser">Dokter</a>
                 </li>
                 <li>
                     <a class="hover:text-navy hover:font-medium cursor-pointer" href="/reservasi">Reservasi</a>
                 </li>
                 <li>
-                    <a class="hover:text-navy hover:font-medium cursor-pointer" href="/obat">Obat</a>
+                    <a class="hover:text-navy hover:font-medium cursor-pointer" href="/obatUser">Obat</a>
                 </li>
                  <li>
                     <a class="hover:text-navy hover:font-medium cursor-pointer" href="userLogout">Keluar</a>
@@ -25,7 +25,9 @@
             </ul>
         </div>
         <div class="flex items-center gap-5">
-            <button class="px-2 font-bold">@Username</button>
+            <a href="/myAccount">
+                <button class="px-2 font-bold">@Username</button>
+            </a>
             <ion-icon onclick="onToggleMenu(this)" name="menu-outline" class="text-2xl cursor-pointer md:hidden"></ion-icon>
         </div>
     </div>

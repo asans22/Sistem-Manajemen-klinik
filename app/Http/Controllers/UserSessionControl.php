@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\User;
+use App\Models\Obat;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
@@ -29,6 +30,20 @@ class UserSessionControl extends Controller
     }
     function dokter(){
         return view("dokter/pasien");
+    }
+    function dokterUser(){
+        return view("user/Dokter");
+    }
+    function myAccount(){
+        return view("user/Account");
+    }
+    function reservasi(){
+       return view("user/reservasi");
+    }
+    function obatUser(){
+        $obats = Obat::all();
+       return view("user/obat",compact('obats'));
+        
     }
 
 

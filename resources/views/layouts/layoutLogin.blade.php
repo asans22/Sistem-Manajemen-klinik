@@ -18,10 +18,6 @@
 
 
 <body>
-    <nav class="absolute mx-[15%] mt-[3%] flex items-center gap-3 z-20">
-        <img src="{{ url('assets/img/logo.png') }}" alt="Logo">
-        <h1 class="font-poppins font-bold text-linen cursor-default">SIMAK</h1>
-    </nav>
     <main>
         @yield('content')
     </main>
