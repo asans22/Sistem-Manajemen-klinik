@@ -5,6 +5,10 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Obat;
 use App\Models\Dokter;
+use App\Models\User;
+use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Session;
 
 
 class halamanAdminController extends Controller
@@ -90,12 +94,21 @@ public function storeDokter(Request $request){
     $dokter->name = $validated['name'];
     $dokter->alamat = $validated['alamat'];
     $dokter->no_hp = $validated['no_hp'];
-    $dokter->password = $validated['password'];
+    $dokter->password = Hash::make($validated['password']);
     $dokter->spesialis = $validated['spesialis'];
     $dokter->jadwal = $validated['jadwal'];
     $dokter->save();
 
-    return redirect()->route('adminDokter')->with('success', 'Data dokter  berhasil ditambahkan!');
+    User::create([
+        'name' => $request->name,
+        'email' => $request->email,
+        'no_hp' => $request->no_hp,
+        'alamat' => $request->alamat,
+        'password' => Hash::make($request->password),
+        'role' => 'dokter',
+    ]);
+
+    return redirect()->back()->with('success', 'Dokter dan akun pengguna berhasil dibuat');
 }
 
 public function updateDokter(Request $request)
