@@ -8,12 +8,12 @@
         <div class="inline-block align-bottom bg-white rounded-lg text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-lg sm:w-full">
             <div class="bg-white px-4 pt-5 pb-4 sm:p-6 sm:pb-4">
                 <div class="sm:flex sm:items-start">
-                    <div class="mt-3 text-center sm:mt-0 sm:ml-4 sm:text-left">
+                    <div class="mt-3 text-center w-full sm:mt-0 sm:text-left">
                         <h3 class="text-lg leading-6 font-medium text-gray-900" id="modal-title">
                             Tambah Data Dokter
                         </h3>
                         <div class="mt-2">
-                            <form method="POST" action="{{ route('dokter.store') }}">
+                            <form method="POST" action="{{ route('dokter.store') }}" enctype="multipart/form-data">
                                 @csrf
                                 <div class="mb-4">
                                     <label for="email" class="block text-gray-700 text-sm font-bold mb-2">Email:</label>
@@ -30,7 +30,7 @@
                                 <div class="mb-4">
                                     <label for="alamat" class="block text-gray-700 text-sm font-bold mb-2">Alamat:</label>
                                     <input type="text" name="alamat" id="alamat" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" required>
-                                </div> 
+                                </div>
                                 <div class="mb-4">
                                     <label for="no_hp" class="block text-gray-700 text-sm font-bold mb-2">No HP:</label>
                                     <input type="text" name="no_hp" id="no_hp" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" required>
@@ -44,13 +44,20 @@
                                     <input type="text" name="spesialis" id="spesialis" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" required>
                                 </div>
                                 <div class="mb-4">
+                                    <label for="deskripsi" class="block text-gray-700 text-sm font-bold mb-2">Deskripsi:</label>
+                                    <input type="text" name="deskripsi" id="deskripsi" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" required>
+                                </div>
+                                <div class="mb-4">
                                     <label for="jadwal" class="block text-gray-700 text-sm font-bold mb-2">Jadwal Praktek:</label>
                                     <input type="text" name="jadwal" id="jadwal" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" required>
-                                </div>                                
-
+                                </div>
+                                <div class="mb-4">
+                                    <label for="image" class="block text-gray-700 text-sm font-bold mb-2">Foto Dokter:</label>
+                                    <input type="file" name="image" id="image" accept="image/*" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" required>
+                                </div>
                                 <div class="flex items-center justify-between">
-                                   
-                                    <button type="submit"  class="bg-neon hover:bg-[#1e939b] text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">
+
+                                    <button type="submit" class="bg-neon hover:bg-[#1e939b] text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">
                                         Simpan
                                     </button>
                                     <button type="button" id="closeCreateModalDokter" class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">
