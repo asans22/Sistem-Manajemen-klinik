@@ -20,7 +20,9 @@ return new class extends Migration
             $table->string('no_hp');
             $table->string('password');
             $table->string('spesialis');
+            $table->string('deskripsi');
             $table->string('jadwal');
+            $table->string('image')->nullable();
             $table->timestamps();
         });
     }
