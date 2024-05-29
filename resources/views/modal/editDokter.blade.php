@@ -7,12 +7,12 @@
         <div class="inline-block align-bottom bg-white rounded-lg text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-lg sm:w-full">
             <div class="bg-white px-4 pt-5 pb-4 sm:p-6 sm:pb-4">
                 <div class="sm:flex sm:items-start">
-                    <div class="mt-3 text-center sm:mt-0 sm:ml-4 sm:text-left">
+                    <div class="mt-3 text-center w-full sm:mt-0 sm:text-left">
                         <h3 class="text-lg leading-6 font-medium text-gray-900" id="modal-title">
                             Edit Data Dokter
                         </h3>
                         <div class="mt-2">
-                            <form method="POST" action="{{ route('dokter.update') }}">
+                            <form method="POST" action="{{ route('dokter.update') }}" enctype="multipart/form-data">
                                 @csrf
                                 @method('PUT')
                                 <input type="hidden" name="id" id="editId">
@@ -38,15 +38,23 @@
                                 </div>
                                 <div class="mb-4">
                                     <label for="editPassword" class="block text-gray-700 text-sm font-bold mb-2">Password:</label>
-                                    <input type="text" name="password" id="editPassword" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" required>
+                                    <input type="text" name="password" id="editPassword" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
                                 </div>
                                 <div class="mb-4">
                                     <label for="editSpesialis" class="block text-gray-700 text-sm font-bold mb-2">Spesialis:</label>
                                     <input type="text" name="spesialis" id="editSpesialis" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" required>
                                 </div>
                                 <div class="mb-4">
+                                    <label for="editDeskripsi" class="block text-gray-700 text-sm font-bold mb-2">Deskripsi:</label>
+                                    <input type="text" name="deskripsi" id="editDeskripsi" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" required>
+                                </div>
+                                <div class="mb-4">
                                     <label for="editJadwal" class="block text-gray-700 text-sm font-bold mb-2">Jadwal Praktek:</label>
                                     <input type="text" name="jadwal" id="editJadwal" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" required>
+                                </div>
+                                <div class="mb-4">
+                                    <label for="image" class="block text-gray-700 text-sm font-bold mb-2">Foto Dokter:</label>
+                                    <input type="file" name="image" id="image" accept="image/*" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
                                 </div>             
                                 <div class="flex items-center justify-between">
                                     <button type="submit" class="bg-neon hover:bg-[#1e939b] text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">
