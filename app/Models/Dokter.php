@@ -10,5 +10,16 @@ class Dokter extends Model
     use HasFactory;
 
     protected $table = 'dokters'; // Nama tabel di database
-    protected $fillable = ['email', 'id_dokter', 'name', 'alamat', 'no_hp', 'password', 'spesialis', 'jadwal']; // Kolom yang bisa diisi
+    protected $fillable = [
+        'email', 
+        'id_dokter', 
+        'name', 
+        'alamat', 
+        'no_hp', 
+        'password', 
+        'spesialis',
+        'deskripsi',
+        'jadwal',
+        'image',
+    ];
 }
