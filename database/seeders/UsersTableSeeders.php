@@ -24,22 +24,22 @@ class UsersTableSeeders extends Seeder
             'alamat'=>'Jalan Utama Gampong Rukoh',
             'password'=>bcrypt('123456')
         ], 
-         [
-            'name'=>'agil',
-            'email'=>'agil@gmail.com',
-            'role'=>'user',
-            'no_hp'=>'087801481212',
-            'alamat'=>'Blang Bintang',
-            'password'=>bcrypt('123456')
-         ],
-         [
-            'name'=>'dimas',
-            'email'=>'dimas@gmail.com',
-            'role'=>'dokter',
-            'no_hp'=>'087801481313 ',
-            'alamat'=>'Blang Bintang',
-            'password'=>bcrypt('123456')
-        ]
+        //  [
+        //     'name'=>'agil',
+        //     'email'=>'agil@gmail.com',
+        //     'role'=>'user',
+        //     'no_hp'=>'087801481212',
+        //     'alamat'=>'Blang Bintang',
+        //     'password'=>bcrypt('123456')
+        //  ],
+        //  [
+        //     'name'=>'dimas',
+        //     'email'=>'dimas@gmail.com',
+        //     'role'=>'dokter',
+        //     'no_hp'=>'087801481313',
+        //     'alamat'=>'Blang Bintang',
+        //     'password'=>bcrypt('123456')
+        // ]
         ];
 
         foreach ($userData as $key => $value) {

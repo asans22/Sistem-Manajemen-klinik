@@ -1,4 +1,4 @@
-<div id="modalEditObat" class="fixed z-10 inset-0 overflow-y-auto hidden">
+<div id="modalEditPasien" class="fixed z-10 inset-0 overflow-y-auto hidden">
     <div class="flex items-center justify-center min-h-screen pt-4 px-4 pb-20 text-center sm:block sm:p-0">
         <div class="fixed inset-0 transition-opacity" aria-hidden="true">
             <div class="absolute inset-0 bg-gray-500 opacity-75"></div>
@@ -9,30 +9,30 @@
                 <div class="sm:flex sm:items-start">
                     <div class="mt-3 text-center w-full sm:mt-0 sm:text-left">
                         <h3 class="text-lg leading-6 font-medium text-gray-900" id="modal-title">
-                            Edit Data Obat
+                            Edit Data Dokter
                         </h3>
                         <div class="mt-2">
-                            <form method="POST" action="{{ route('obat.update') }}">
+                            <form method="POST" action="{{ route('dokterPasien.update') }}">
                                 @csrf
                                 @method('PUT')
                                 <input type="hidden" name="id" id="editId">
                                 <div class="mb-4">
-                                    <label for="editName" class="block text-gray-700 text-sm font-bold mb-2">Nama:</label>
-                                    <input type="text" name="name" id="editName" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" required>
+                                    <label for="editKeluhan" class="block text-gray-700 text-sm font-bold mb-2">Keluhan:</label>
+                                    <input type="text" name="keluhan" id="editKeluhan" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" required>
                                 </div>
                                 <div class="mb-4">
-                                    <label for="editJenis" class="block text-gray-700 text-sm font-bold mb-2">Jenis:</label>
-                                    <input type="text" name="jenis" id="editJenis" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" required>
+                                    <label for="editObat" class="block text-gray-700 text-sm font-bold mb-2">Obat:</label>
+                                    <input type="text" name="obat" id="editObat" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" required>
                                 </div>
                                 <div class="mb-4">
-                                    <label for="editStok" class="block text-gray-700 text-sm font-bold mb-2">Stok:</label>
-                                    <input type="number" name="stok" id="editStok" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" required>
-                                </div>
+                                    <label for="editHasilPemeriksaan" class="block text-gray-700 text-sm font-bold mb-2">Hasil Pemeriksaan:</label>
+                                    <input type="text" name="hasil_pemeriksaan" id="editHasilPemeriksaan" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" required>
+                                </div>        
                                 <div class="flex items-center justify-between">
                                     <button type="submit" class="bg-neon hover:bg-[#1e939b] text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">
                                         Simpan
                                     </button>
-                                    <button type="button" id="closeEditModal" class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">
+                                    <button type="button" id="closeEditModalPasien" class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">
                                         Batal
                                     </button>
                                 </div>

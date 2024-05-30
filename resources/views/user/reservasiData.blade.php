@@ -21,11 +21,8 @@
                 <div class="mt-2 mb-5">
                     <select id="spesialis" name="spesialis" autocomplete="spesialis" required class="block w-full border border-solid border-slate-400 rounded-md hover:border-blue-400 focus:ring focus:ring-blue-200 focus:ring-opacity-50 p-2">
                         <option value="" disabled>Pilih Spesialis</option>
-                        <option value="{{ $dokter->spesialis }}" selected>{{ $dokter->spesialis }}</option>
-                        @foreach ($allDokters as $doc)
-                        @if ($doc->spesialis !== $dokter->spesialis)
-                        <option value="{{ $doc->spesialis }}">{{ $doc->spesialis }}</option>
-                        @endif
+                        @foreach ($allDokters as $doc)                
+                        <option value="{{ $doc->spesialis }}">{{ $doc->spesialis }}</option>                
                         @endforeach
                     </select>
                 </div>
@@ -35,11 +32,8 @@
                     <div class="mt-2 mb-5">
                         <select id="dokter" name="dokter" autocomplete="dokter" required class="block w-full border border-solid border-slate-400 rounded-md hover:border-blue-400 focus:ring focus:ring-blue-200 focus:ring-opacity-50 p-2">
                             <option value="" disabled>Pilih Dokter</option>
-                            <option value="{{ $dokter->name }}" selected>{{ $dokter->name }}</option>
                             @foreach ($allDokters as $doc)
-                            @if ($doc->spesialis === $dokter->spesialis && $doc->name !== $dokter->name)
                             <option value="{{ $doc->name }}">{{ $doc->name }}</option>
-                            @endif
                             @endforeach
                         </select>
                     </div>
@@ -55,11 +49,8 @@
                             <div class="mt-2 mb-5">
                                 <select id="jadwal" name="jadwal" autocomplete="jadwal" required class="block w-full border border-solid border-slate-400 rounded-md hover:border-blue-400 focus:ring focus:ring-blue-200 focus:ring-opacity-50 p-2">
                                     <option value="" disabled>Pilih Jadwal</option>
-                                    <option value="{{ $dokter->jadwal }}" selected>{{ $dokter->jadwal }}</option>
                                     @foreach ($allDokters as $doc)
-                                    @if ($doc->spesialis === $dokter->spesialis && $doc->jadwal !== $dokter->jadwal)
                                     <option value="{{ $doc->jadwal }}">{{ $doc->jadwal }}</option>
-                                    @endif
                                     @endforeach
                                 </select>
                             </div>
