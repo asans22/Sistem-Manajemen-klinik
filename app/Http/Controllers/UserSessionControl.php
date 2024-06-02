@@ -37,6 +37,7 @@ class UserSessionControl extends Controller
     }
     function dokter()
     {
+        $reservasi = Reservasi::all();
         $pasien = Pasien::all(); // Mengambil semua data pasien dari tabel pasien
         return view('dokter.pasien', compact('pasien'));
     }
@@ -235,6 +236,7 @@ class UserSessionControl extends Controller
         $pasien = new Pasien();
         $pasien->name = $user->name; // Simpan name dari user
         $pasien->keluhan = $validated['keluhan']; // Simpan keluhan dari reservasi
+        $pasien->dokter = $validated['dokter'];
         $pasien->save();
 
         return redirect()->back()->with('success', 'Pesan reservasi berhasil disimpan.');

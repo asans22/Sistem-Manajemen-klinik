@@ -15,6 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('name');
             $table->string('keluhan');
+            $table->string('dokter');
             $table->string('obat')->default('');
             $table->string('hasil_pemeriksaan')->default('');
             $table->timestamps();

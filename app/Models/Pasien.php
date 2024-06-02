@@ -14,6 +14,7 @@ class Pasien extends Model
         'name',
         'keluhan',
         'obat',
+        'dokter',
         'hasil_pemeriksaan',
     ];
 }

@@ -7,7 +7,7 @@
         <p class="text-center p-3 w-full text-light">Kembali</p>
 </a>
 
-<div class="pl-10 my-10 flex justify-center">
+<div class="pl-10 my-10 flex justify-center mb-32">
     <table class="border-collapse border border-black w-[80%]">
         <thead>
             <tr>

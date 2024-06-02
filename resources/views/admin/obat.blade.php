@@ -6,7 +6,7 @@
     </div>
 
     <!-- Tombol Tambah -->
-    <div id="openModal" class="box-border border-2 border-button hover:bg-[#1e939b] ml-10 inline-block mb-5 py-1 px-3 rounded-md text-base font-semibold bg-neon text-blue hover:text-white hover:scale-105 active:scale-100 hover:duration-75 cursor-pointer">
+    <div id="openModal" class="box-border border-2 border-button hover:bg-[#1e939b] ml-52 inline-block mb-5 py-1 px-3 rounded-md text-base font-semibold bg-neon text-blue hover:text-white hover:scale-105 active:scale-100 hover:duration-75 cursor-pointer">
         <p data-toggle="modal" data-target="#modalCreate">Tambah</p>
     </div>
 
@@ -14,10 +14,10 @@
     @include('modal.createObat')
     @include('modal.editObat')
 
-    <div class="pl-10">
+    <div class="pl-10 pt-10 w-[80%] m-auto flex justify-center">
         <table class="box-border bottom-1 text-center">
             <thead class="font-semibold">
-                <tr class="h-12">
+                <tr class="h-12 ">
                     <td class="border-2 border-black w-16">No</td>
                     <td class="border-2 border-black w-52">Nama</td>
                     <td class="border-2 border-black w-52">Jenis</td>
