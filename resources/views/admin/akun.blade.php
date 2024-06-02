@@ -6,15 +6,15 @@
         <h1 class="font-bold text-3xl">Data Akun</h1>
     </div>
 
-    <div class="pl-10">
-        <table class="box-border bottom-1 text-center">
+    <div class="pl-10 pt-10 w-[80%] m-auto flex justify-center">
+        <table class="border-collapse border w-full text-center border-black">
             <thead class="font-semibold">
                 <tr class="h-10">
-                    <td class="border-2 border-black w-16">No</td>
-                    <td class="border-2 border-black w-52">Email</td>
-                    <td class="border-2 border-black w-52">Nama</td>
-                    <td class="border-2 border-black w-52">No HP</td>
-                    <td class="border-2 border-black w-52">Alamat</td>
+                    <td class="border-2 border-black px-4 py-2">No</td>
+                    <td class="border-2 border-black px-4 py-2">Email</td>
+                    <td class="border-2 border-black px-4 py-2">Nama</td>
+                    <td class="border-2 border-black px-4 py-2">No HP</td>
+                    <td class="border-2 border-black px-4 py-2">Alamat</td>
                 </tr>
             </thead>
             <tbody>

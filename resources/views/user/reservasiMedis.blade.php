@@ -7,7 +7,7 @@
 <a href="myAccount" class="font-poppins flex w-[10%] ml-[12.5%] bg-navy rounded-lg hover:bg-blue-sky hover:rounded-lg active:bg-black mt-8">
     <p class="text-center p-3 w-full text-light">Kembali</p>
 </a>
-<div class="pl-10 my-10 flex justify-center">
+<div class="pl-10 my-10 flex justify-center mb-32">
     <table class="border-collapse border border-black w-[80%]">
         <thead>
             <tr>
