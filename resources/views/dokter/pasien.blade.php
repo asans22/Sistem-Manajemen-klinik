@@ -40,6 +40,7 @@
                 </thead>
                 <tbody>
                     @foreach ($pasien as $index => $pasien)
+                    @if ($pasien->dokter == auth()->user()->name)
                     <tr>
                         <td class="border border-black px-4 py-2">{{ $index + 1 }}</td>
                         <td class="border border-black px-4 py-2">{{ $pasien->name }}</td>
@@ -55,6 +56,7 @@
                             </button>
                         </td>
                     </tr>
+                    @endif
                     @endforeach
                 </tbody>
             </table>
