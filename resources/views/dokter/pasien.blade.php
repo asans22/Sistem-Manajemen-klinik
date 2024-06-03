@@ -14,7 +14,7 @@
     <div>
         <div class="flex m-5 justify-end">
             <a class="bg-navy px-2 mr-5 rounded-md hover:bg-blue hover:text-navy hover:font-medium cursor-pointer text-linen" href="userLogout">Keluar</a>
-            <p class="mr-2 text-right font-bold text-navy">dr.{{ auth()->user()->name }}</p>
+            <p class="mr-2 text-right font-bold text-navy">{{ auth()->user()->name }}</p>
             <a>
                 <svg width="24" height="24" viewBox="0 0 31 42" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M15.5 0C11.2375 0 7.75 5.88 7.75 13.125C7.75 20.37 11.2375 26.25 15.5 26.25C19.7625 26.25 23.25 20.37 23.25 13.125C23.25 5.88 19.7625 0 15.5 0ZM7.40125 26.25C3.29375 26.5125 0 31.08 0 36.75V42H31V36.75C31 31.08 27.745 26.5125 23.5988 26.25C21.5063 29.4525 18.6388 31.5 15.5 31.5C12.3612 31.5 9.49375 29.4525 7.40125 26.25Z" fill="#2E4A70" fill-opacity="0.7" />
