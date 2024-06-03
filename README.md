@@ -19,7 +19,7 @@ Ini adalah Sistem Manajemen Klinik yang dibangun menggunakan framework Laravel d
 - **Pendaftaran Pasien**: Admin dapat melihat daftar pasien yang telah mendaftar di sistem.
 
 ### Peran Dokter
-- **Data Pasien**: Dokter dapat melihat data pasien yang akan diperiksa.
+- **Data Pasien**: Dokter dapat melihat data pasien yang akan diperiksa dan memberikan hasil pemeriksaan dan obat untuk pasien.
 
 ## Instalasi
 
@@ -27,7 +27,7 @@ Untuk menginstal dan menjalankan proyek ini secara lokal, ikuti langkah-langkah 
 
 1. **Clone repositori**:
    ```bash
-   git clone https://github.com/username-anda/sistem-manajemen-klinik.git
+   git clone https://github.com/asans22/Sistem-Manajemen-klinik.git
    cd sistem-manajemen-klinik
    ```
 
@@ -81,13 +81,14 @@ Jika Anda ingin berkontribusi pada proyek ini, silakan ikuti langkah-langkah ber
 4. Push ke branch (`git push origin fitur/FiturAnda`).
 5. Buat Pull Request baru.
 
-## Lisensi
+## Team members:
+1. Ahmad Syah Ramadhan 2208107010033
+2. Agil Mughni 2208107010025
 
-Proyek ini adalah perangkat lunak open-source yang dilisensikan di bawah [lisensi MIT](LICENSE).
 
 ## Kontak
 
-Untuk pertanyaan atau saran, silakan hubungi saya di [email-anda@example.com].
+Untuk pertanyaan atau saran, silakan hubungi saya di [ahmadsyahrmdn@gmail.com] atau rekan saya [agilmughni1@gmail.com].
 
 ---
 
