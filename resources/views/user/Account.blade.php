@@ -35,7 +35,7 @@
             <input value="{{ auth()->user()->alamat }}" name="alamat" class="shadow appearance-none border rounded w-full py-2 px-3 leading-tight focus:outline-none focus:shadow-outline" id="alamat" type="text" placeholder="Masukkan alamat">
         </div>
         <div class="flex items-center justify-center mt-8">
-            <button class="bg-blue-500 hover:bg-blue-700 text-linen font-bold py-3 px-4 rounded-[7px] hover:text-blue-sky hover:bg-black hover:rounded-none active:text-black active:bg-transparent focus:ring focus:ring-blue-sky" type="submit">
+            <button class="bg-navy hover:bg-blue-700 text-linen font-bold py-3 px-4 rounded-[7px] hover:text-blue-sky hover:bg-black  active:text-black active:bg-transparent focus:ring focus:ring-blue-sky" type="submit">
                 Simpan Perubahan
             </button>
         </div>
