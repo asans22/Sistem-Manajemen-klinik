@@ -56,13 +56,18 @@ Untuk menginstal dan menjalankan proyek ini secara lokal, ikuti langkah-langkah 
    ```bash
    php artisan db:seed
    ```
+7. **Import database dari file sistem_manajemen_klinik.sql (opsional)**:
+   ```bash
+   -buka phpmyadmin
+   -import file sistem_manajemen_klinik.sql
+   ```
 
-7. **Kompilasi aset**:
+8. **Kompilasi aset**:
    ```bash
    npm run dev
    ```
 
-8. **Mulai server pengembangan lokal**:
+9. **Mulai server pengembangan lokal**:
    ```bash
    php artisan serve
    ```
