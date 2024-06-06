@@ -8,10 +8,14 @@
     <li class="flex justify-between items-center py-5 font-poppins">
         <div class="flex items-center gap-5">
             @if ($doctors->image && file_exists(public_path('images/' . $doctors->image)))
-            <img src="{{ asset('images/' . $doctors->image) }}" alt="Foto Dokter" class="rounded-full bg-linen h-24 w-24 flex-shrink-0 mr-10">
+            <div class="h-24 w-24 mr-10">
+                <img src="{{ asset('images/' . $doctors->image) }}" alt="Foto Dokter" class="rounded-full bg-linen h-full w-full flex-shrink-0 ">
+            </div>
             @else
             <!-- Gambar default jika tidak ada gambar -->
-            <img src="{{ url('assets/img/doctor_default.png') }}" alt="Foto Dokter" class="w-20 h-20 object-cover">
+            <div class="h-24 w-24 mr-10">
+                <img src="{{ url('assets/img/doctor_default.png') }}" alt="Foto Dokter" class="rounded-full bg-linen w-full h-full flex-shrink-0">
+            </div>
             @endif
 
             <div class="text-navy">
