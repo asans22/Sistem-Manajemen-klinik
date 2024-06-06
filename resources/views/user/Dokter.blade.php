@@ -7,7 +7,6 @@
     @foreach($doctors as $doctors)
     <li class="flex justify-between items-center py-5 font-poppins">
         <div class="flex items-center gap-5">
-            <!-- <img class="rounded-full bg-linen h-24 w-24 flex-shrink-0 mr-10" src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt=""> -->
             @if ($doctors->image && file_exists(public_path('images/' . $doctors->image)))
             <img src="{{ asset('images/' . $doctors->image) }}" alt="Foto Dokter" class="rounded-full bg-linen h-24 w-24 flex-shrink-0 mr-10">
             @else
