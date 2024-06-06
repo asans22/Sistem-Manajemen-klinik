@@ -52,7 +52,7 @@ Untuk menginstal dan menjalankan proyek ini secara lokal, ikuti langkah-langkah 
    php artisan migrate
    ```
 
-6. **Seed database (opsional)**:
+6. **Seed database**:
    ```bash
    php artisan db:seed
    ```
